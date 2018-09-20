@@ -42,6 +42,7 @@ public class FindMaxSubArray {
         int rightSum = Integer.MIN_VALUE;
         sum = 0;
         int maxRight = -1;
+        //mid + 1 就体现出它不能适用在只有一个元素的情况
         for(int i = mid + 1; i <= high; i++){
             sum += arr[i];
             if(sum > rightSum){
