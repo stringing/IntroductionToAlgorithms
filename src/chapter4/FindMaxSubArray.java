@@ -26,6 +26,7 @@ public class FindMaxSubArray {
         return crossInfo;
     }
 
+    //查找过中点的情况
     private static TribleInfo<Integer, Integer, Integer> findMaximumCrossingSubarray(int[] arr, int low, int mid, int high){
         //找左边最大的
         int leftSum = Integer.MIN_VALUE;
