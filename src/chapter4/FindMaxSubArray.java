@@ -1,7 +1,7 @@
 package chapter4;
 
 /**
- * @Description 寻找最大子数组
+ * @Description 分治寻找最大子数组
  * @Author Stringing
  * @Date 9/20/18 5:01 PM
  */
