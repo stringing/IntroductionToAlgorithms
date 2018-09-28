@@ -48,7 +48,7 @@ public class SquareMatrixMultiplyRecursive {
         return c;
     }
 
-    private static int[][] mergeMatrix(int[][] m11, int[][] m12, int[][] m21, int[][] m22){
+    public static int[][] mergeMatrix(int[][] m11, int[][] m12, int[][] m21, int[][] m22){
         int n = m11.length;
         int l = 2 * n;
         int[][] m = new int[l][l];
@@ -71,16 +71,28 @@ public class SquareMatrixMultiplyRecursive {
         }
     }
 
-    private static void addMatrix(int[][] an, int[][] bn, int[][] c) {
+    private static int[][] addMatrix(int[][] an, int[][] bn, int[][] c) {
         int n = an.length;
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
                 c[i][j] = an[i][j] + bn[i][j];
             }
         }
+        return c;
     }
 
-    private static int[][] partitionMatrix(int[][] matrix, int startRow, int endRow, int startColumn, int endColumn) {
+    public static int[][] addMatrix(int[][] an, int[][] bn){
+        int n = an.length;
+        int[][] c = new int[n][n];
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                c[i][j] = an[i][j] + bn[i][j];
+            }
+        }
+        return c;
+    }
+
+    public static int[][] partitionMatrix(int[][] matrix, int startRow, int endRow, int startColumn, int endColumn) {
         int[][] subMatrix = new int[matrix.length / 2][matrix.length / 2];
         int row = 0;
         for(int i = startRow; i < endRow; i++){
