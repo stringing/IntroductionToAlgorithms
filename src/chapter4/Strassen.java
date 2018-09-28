@@ -79,7 +79,7 @@ public class Strassen {
             p5 = strassen(s5, s6, p5);
             p6 = strassen(s7, s8, p6);
             p7 = strassen(s9, s10, p7);
-            //步骤4：通过Pi矩阵的不同组合进行加减运算，计算出矩阵C的结果矩阵C11,C12,C21和C22
+            //步骤4：通过Pi矩阵的不同组合进行加减运算,计算出矩阵C的结果矩阵C11,C12,C21和C22
             c11 = tool.addMatrix(subtractMatrix(tool.addMatrix(p5, p4), p2), p6);
             c12 = tool.addMatrix(p1, p2);
             c21 = tool.addMatrix(p3, p4);
